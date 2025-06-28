@@ -1,30 +1,80 @@
 <script lang="ts" setup>
 const showMenu = ref(false)
-// const showOrder = ref(false)
+const showOrder = ref(false)
 
 function toggleMenu() {
   showMenu.value = !showMenu.value
+  showOrder.value = false
 }
+
+function toggleOrder() {
+  showOrder.value = !showOrder.value
+  showMenu.value = false
+}
+
+useHead({
+  title: 'Urbana shop',
+  meta: [
+    { name: 'description', content: 'Food delivery app' },
+  ],
+  bodyAttrs: {
+    class: 'bg-background',
+  },
+})
 </script>
 
 <template>
-  <div class="bg-[#262837] w-full min-h-screen">
+  <div class="bg-background w-full min-h-screen">
     <Sidebar :show-menu="showMenu" />
+    <Cart :show-order="showOrder" @toggle-order="toggleOrder" />
+
     <!-- Menu mobile -->
-    <nav class="bg-[#1f1d2b] lg:hidden fixed w-full bottom-0 left-0 text-2xl text-gray-400 py-2 px-8 flex items-center justify-between rounded-tl-2xl rounded-tr-2xl">
+    <nav class="bg-surface lg:hidden fixed w-full bottom-0 left-0 text-3xl text-gray-400 py-2 px-8 flex items-center justify-between rounded-tl-xl rounded-tr-xl">
       <button class="p-2">
         <Icon name="ri:user-3-line" />
       </button>
       <button class="p-2">
         <Icon name="ri:add-line" />
       </button>
-      <button class="p-2">
+      <button class="p-2" @click="toggleOrder">
         <Icon name="ri:pie-chart-line" />
       </button>
       <button class="p-2 text-white" @click="toggleMenu">
         <Icon :name="showMenu ? 'ri:close-line' : 'ri:menu-3-line'" />
       </button>
     </nav>
-    <main class="lg:pl-28 grid grid-cols-1 lg:grid-cols-8 w-full " />
+
+    <main class="lg:pl-24 lg:pr-[409px] pb-20">
+      <div class="md:p-8 p-4">
+        <!-- Header -->
+        <Header />
+        <!-- Title content -->
+        <div class="flex items-center justify-between mb-16">
+          <h2 class="text-xl text-gray-300">
+            Choose dishes
+          </h2>
+          <button class="flex items-center gap-2 text-gray-300 bg-surface py-2 px-4 rounded-lg">
+            <Icon name="ri:arrow-down-s-line" /> Dine in
+          </button>
+        </div>
+        <!-- Content -->
+        <div class="p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-2 xl:gap-x-8">
+          <!-- Card -->
+          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <!-- Card -->
+          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+        </div>
+      </div>
+    </main>
   </div>
 </template>
