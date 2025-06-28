@@ -10,13 +10,25 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-
   modules: [
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/eslint',
   ],
+  fonts: {
+    families: [
+      { name: 'Barlow', provider: 'google', weights: [400, 500, 600, 700, 800, 900] },
+    ],
+  },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'iconly',
+        dir: './assets/iconly',
+      },
+    ],
+  },
   eslint: {
     config: {
       standalone: false,
