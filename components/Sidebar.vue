@@ -5,7 +5,7 @@ defineProps<{ showMenu: boolean }>()
 <template>
   <div class="bg-[#1F1D2B] fixed lg:left-0 top-0 w-[106px] h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl z-50 -left-full transition-all" :class="[showMenu ? 'left-0' : '-left-full']">
     <div>
-      <div class="justify-self-center mb-4">
+      <div class="flex justify-center mb-4">
         <Logo />
       </div>
       <ul class="pl-3 space-y-3">
