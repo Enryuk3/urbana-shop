@@ -44,35 +44,33 @@ useHead({
       </button>
     </nav>
 
-    <main class="lg:pl-24 lg:pr-[409px] pb-20">
-      <div class="md:p-8 p-4">
+    <main class="lg:pl-[106px] lg:pr-[409px] pb-20">
+      <div class="md:p-8 p-6">
         <!-- Header -->
         <Header />
         <!-- Title content -->
         <div class="flex items-center justify-between mb-16">
-          <h2 class="text-xl text-gray-300">
+          <h2 class="text-xl text-white">
             Choose dishes
           </h2>
-          <button class="flex items-center gap-2 text-gray-300 bg-surface py-2 px-4 rounded-lg">
-            <Icon name="ri:arrow-down-s-line" /> Dine in
+          <button class="flex items-center gap-2.5 text-white bg-surface p-[14px] font-medium text-sm rounded-lg outline outline-[#393C49]">
+            <Icon name="ri:arrow-down-s-line" class="size-5" /> Dine in
           </button>
         </div>
         <!-- Content -->
-        <div class="p-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-2 xl:gap-x-8">
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(192px,1fr))] gap-y-20 lg:gap-y-16 gap-x-8">
           <!-- Card -->
           <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
           <!-- Card -->
-          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <Card img="/dish.png" title="Salted Pasta with mushroom sauce" price="$2.69" inventory="20" />
           <!-- Card -->
-          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <Card img="/comida.png" title="Beef dumpling in hot and sour soups" price="$2.99" inventory="20" />
           <!-- Card -->
-          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <Card img="/dish.png" title="Healthy noodle with spinach leaf" price="$3.29" inventory="20" />
           <!-- Card -->
-          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <Card img="/comida.png" title="Hot spicy fried rice with omelet" price="$3.49" inventory="20" />
           <!-- Card -->
-          <Card img="/dish.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
-          <!-- Card -->
-          <Card img="/comida.png" title="Speacy seasoned seafood noodles" price="$2.29" inventory="20" />
+          <Card img="/dish.png" title="Spicy instant noodle with special omelette" price="$3.69" inventory="20" />
         </div>
       </div>
     </main>

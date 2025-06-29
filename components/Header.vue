@@ -21,7 +21,7 @@
       </form>
     </div>
     <!-- Tabs -->
-    <nav class="text-gray-300 flex items-center justify-between md:justify-start lg:gap-7 border-b border-gray-700 font-semibold mb-6">
+    <nav class="text-gray-300 flex items-center justify-between md:justify-start lg:gap-7 border-b border-[#393C49] font-semibold mb-6">
       <a href="#" class="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-primary before:left-0 before:rounded-full before:-bottom-[1px] before:z-1 text-primary">Hot dishes</a>
       <a href="#" class="py-2 pr-4">Cold dishes</a>
       <a href="#" class="py-2 pr-4">Soup</a>
